@@ -8,7 +8,7 @@ logo: false
 paginate: 15
 baseurl: /
 domain_name: "https://monoenv.tech"
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: "G-JGC2V3EPEV"
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
