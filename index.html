@@ -2,7 +2,6 @@
 layout: default
 title: Home
 cover: false
-about: 'about.html'
 ---
 
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
@@ -12,14 +11,12 @@ about: 'about.html'
                     <img src="{{ page.logo }}" alt="Blog Logo" />
                 </a>
             {% endif %}
-        <a class="subscribe-button icon-feed" href="{{'feed.xml' | relative_url }} ">Subscribe</a>
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">{{ site.name }}</h1>
             <h2 class="page-description">
                 {% if site.description %} {{ site.description }}. {% endif %}
-                {% if page.about %} <a href='{{page.about | relative_url}}'> About me </a> {% endif %}
             </h2>
         </div>
     </div>
@@ -29,36 +26,96 @@ about: 'about.html'
 
 <main id="content" class="content" role="main">
 
-
-    <div class="extra-pagination inner">
-        {% include pagination.html %}
-    </div>
-
-    {% for post in paginator.posts %}
-
     <article class="post">
-        <header class="post-header">
-            <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        </header>
-        <section class="post-excerpt">
-            {{ post.excerpt }} <a class="read-more" href="{{ post.url | relative_url }}">&raquo;</a>
+
+        <section class="post-content">
+
+            <h3>Introduction</h3>
+
+            <p>
+            Deploying changes into production is the most important activity for a SaaS product as it’s how a company delivers value to users. But it’s also the most fearful activity teams have as it introduces side effects to the latest working version of the product (i.e. latest deployment).
+            </p>
+
+            <p>
+            Several techniques are commonly put in place to de-risk the deployment process: multiplication of environments that mimic production, reliance on teams of QA and SDET, increased time for designing and testing. While all those solutions mitigate the risk of bugs, they massively increase the time to deploy as they introduce layers between local development and the production environment, and introduce the riskiest issue for a SaaS company: delaying user value. 
+            </p>
+
+            <p>
+            We have all experienced changes that went well in staging but didn’t work in production.
+            <strong>We believe staging is a false sense of security.</strong>
+            </p>
+            <p>
+            Mono Environment addresses the question: <i>how can we deliver value at the highest pace while minimising risks</i>. It is the practice of spending all your time and effort on production.
+            </p>
+            <p>
+            Embracing Mono Environment brings several benefits but requires several engineering practices which are listed below.
+            </p>
+
+            <h3>Benefits</h3>
+
+            <h6>High velocity</h6>
+            <ul>
+                <li>Faster time to market.</li>
+                <li>Engineering is not a bottleneck anymore.</li>
+            </ul>
+
+            <h6>Cost savings</h6>
+            <ul>
+                <li>
+                    Lower fixed costs. Production replica are expensive.
+                </li>
+                <li>
+                    Higher ROI. Teams spend their whole time harnessing the production environment.
+                </li>
+            </ul>
+
+            <h6>Better product</h6>
+            <ul>
+                <li>Less production bugs. Thinking production first means quality is built-in.</li>
+                <li>Less frequent and shorter outages. Faster recovery.</li>
+                <li>Better alignment between product and engineering teams</li>
+            </ul>
+
+            <h6>Employee engagement and retention</h6>
+            <ul>
+                <li>
+                Upskilling engineers, widening their business awareness and technical understanding and skills.
+                </li>
+                <li>
+                    Easier recruitment and longer tenure. People are happier working in an environment of high trust and where code is shipped regularly.
+                </li>
+            </ul>
+
+
+            <h3>Engineering practices</h3>
+
+            <ul>
+                <li>Feature Flagging</li>
+                <li>Continuous Deployment</li>
+                <li>Cloud Native</li>
+                <li>Infrastructure as Code</li>
+                <li>Pragmatic Test Driven Development</li>
+                <li>Observability</li>
+                <li>Post mortems</li>
+                <li>Code Review</li>
+                <li>Pragmatic Pair Programming</li>
+                <li>Evolutionary architecture</li>
+                <li>Zero downtime deployments</li>
+                <li>Deploy often and small</li>
+                <li>Test in Production</li>
+            </ul>
+
+            <h3>Authors</h3>
+
+            <ul>
+                <li>Geoffrey Bergeret</li>
+                <li>Paolo Escobar</li>
+                <li>Michael Hancock</li>
+            </ul>
+
         </section>
-        <footer class="post-meta">
-            {% if site.author %}
-                <img class="author-thumb" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
-                {{ site.author }}
-            {% endif %}
-            {% if post.categories.size > 0 %} 
-                {{ post.categories | array_to_sentence_string | prepend: 'on ' }} 
-            {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
-                {{ post.date | date_to_string }}
-            </time> 
-        </footer>
+
     </article>
 
-    {% endfor %}
-
-    {% include pagination.html %}
 
 </main>
