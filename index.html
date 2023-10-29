@@ -45,15 +45,15 @@ cover: false
             <strong>We believe staging is a false sense of security.</strong>
             </p>
             <p>
-            The concept of Mono Environment addresses a fundamental question: <i>How can we maximize the pace of value delivery while minimizing associated risks?</i> It revolves around the practice of channeling all time and effort into the production environment.
+            The concept of Mono Environment addresses a fundamental question: <i>How can we maximise the pace of value delivery while minimising associated risks?</i> It revolves around the practice of channeling all time and effort into the production environment.
             </p>
             <p>
-            Embracing the Mono Environment approach offers numerous advantages but necessitates the implementation of various engineering practices, which are detailed below.
+            Embracing the Mono Environment approach offers numerous benefits but necessitates the implementation of various software delivery practices, which are detailed below.
             </p>
 
-            <h3>Advantages</h3>
+            <h3>Benefits</h3>
 
-            <h6>Enhanced Velocity</h6>
+            <h4>Enhanced Velocity</h4>
             <ul>
                 <li>
                     Accelerated time to market.
@@ -63,7 +63,7 @@ cover: false
                 </li>
             </ul>
 
-            <h6>Cost Efficiency</h6>
+            <h4>Cost Efficiency</h4>
             <ul>
                 <li>
                     Reduced fixed expenses, avoiding the high costs of production replicas.
@@ -73,14 +73,14 @@ cover: false
                 </li>
             </ul>
 
-            <h6>Improved Product Quality</h6>
+            <h4>Improved Product Quality</h4>
             <ul>
                 <li>Fewer production-related issues due to a "production-first" mindset, resulting in built-in quality.</li>
                 <li>Reduced frequency and duration of outages, ensuring quicker recovery.</li>
                 <li>Enhanced collaboration between product and engineering teams</li>
             </ul>
 
-            <h6>Increased employee engagement and retention.</h6>
+            <h4>Increased employee engagement and retention.</h4>
             <ul>
                 <li>
                     Engineers' skill development, expanding their business knowledge and technical expertise.
@@ -94,22 +94,51 @@ cover: false
             </ul>
 
 
-            <h3>Engineering practices</h3>
+            <h3>Software Delivery Practices</h3>
 
             <ul>
-                <li>Feature Flagging</li>
-                <li>Continuous Deployment</li>
-                <li>Cloud Native</li>
-                <li>Infrastructure as Code</li>
-                <li>Pragmatic Test Driven Development</li>
-                <li>Observability</li>
-                <li>Post mortems</li>
-                <li>Code Review</li>
-                <li>Pragmatic Pair Programming</li>
-                <li>Evolutionary architecture</li>
-                <li>Zero downtime deployments</li>
-                <li>Deploy often and small</li>
-                <li>Test in Production</li>
+                <li>
+                    <strong>Production First Mindset:</strong> Embracing a "production first" mindset means treating your live environment as the primary testing ground. This approach ensures that your code is developed and tested with the highest standards right from the start, leading to a more robust and reliable system.
+                </li>
+                <li>
+                    <strong>Post mortems:</strong> Post-mortems are systematic reviews of incidents or outages that occur in the production environment. They help teams learn from their mistakes and continuously improve by identifying root causes and implementing preventive measures.
+                </li>
+                <li>
+                    <strong>Feature Flagging:</strong> Feature flagging enables you to control the release of new features or changes. By toggling flags, you can safely roll out updates and test them in production, allowing for rapid iterations without risking downtime.
+                </li>
+                <li>
+                    <strong>Continuous Deployment:</strong> Continuous Deployment automates the release process, allowing code changes to flow seamlessly from development to production. This approach promotes fast delivery, but it relies heavily on automated testing and monitoring.
+                </li>
+                <li>
+                    <strong>Infrastructure as Code:</strong> Infrastructure as Code (IaC) involves managing and provisioning infrastructure resources through code. It ensures consistency, scalability, and easy replication of your production environment, critical when you can't rely on a staging environment.
+                </li>
+                <li>
+                    <strong>Cloud Native:</strong> Building applications that are "cloud-native" means designing them to fully leverage cloud services. This approach offers scalability and flexibility while reducing the need for complex staging environments.
+                </li>
+                <li>
+                    <strong>Zero Downtime Deployment:</strong> Zero downtime deployments ensure that updates or changes are applied without affecting user experience. This is crucial in environments without staging as it minimises disruptions during the deployment process.
+                </li>
+                <li>
+                    <strong>Observability:</strong> Observability is the ability to understand and monitor your system's behavior in real-time. It helps you identify and resolve issues quickly, even in a production-first approach, by providing valuable insights into your system's health.
+                </li>
+                <li>
+                    <strong>Test Driven Development:</strong> Test-Driven Development (TDD) involves writing tests before code. In a production-first environment, TDD ensures code quality and provides a safety net against regressions when staging isn't an option.
+                </li>
+                <li>
+                    <strong>Automated Testing:</strong> Automated testing includes unit, integration, and end-to-end tests that validate your code's functionality. It's essential for continuous deployment and maintaining high-quality software in a production-first setting.
+                </li>
+                <li>
+                    <strong>Code Review:</strong> Code review is a collaborative process where team members scrutinise each other's code for quality, security, and correctness. In the absence of a staging environment, it's a vital step in maintaining software integrity.
+                </li>
+                <li>
+                    <strong>Pair Programming:</strong> Pair programming involves two developers working together at the same computer. This practice enhances code quality, promotes knowledge sharing, and mitigates risks associated with not having a dedicated staging environment.
+                </li>
+                <li>
+                    <strong>Evolutionary architecture:</strong> Evolutionary architecture emphasises adaptability and incremental changes to your system over time. It aligns well with a production-first approach by allowing constant improvement without major disruptions.
+                </li>
+                <li>
+                    <strong>Small Changes:</strong> Deploying small, incremental changes frequently reduces the risk of introducing errors and simplifies troubleshooting, making it an excellent strategy for environments without staging.
+                </li>
             </ul>
 
             <h3>Authors</h3>
