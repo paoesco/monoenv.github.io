@@ -18,6 +18,8 @@ The concept of Mono Environment addresses a fundamental question: _How can we ma
 
 Embracing the Mono Environment approach offers numerous benefits but necessitates the implementation of various software delivery practices, which are detailed below.
 
+<br/>
+
 ### Benefits
 
 #### Enhanced Velocity
@@ -42,32 +44,22 @@ Embracing the Mono Environment approach offers numerous benefits but necessitate
 *   Increases people confidence to deploy, understand and fix issue as they have a much better understanding of the overall product.
 *   Streamlined recruitment and longer employee tenures in a high-trust environment with regular code deployments, leading to greater job satisfaction.
 
+
+<br/>
 ### Software Delivery Practices
 
 *   **Production First** is about implementing features focusing on live environment runtime.
-
 *   **Post Mortems** are systematic blameless retrospectives of incidents or outages.
-
 *   **Feature Flagging:** enables you to control the release of new features or changes.
-
 *   **Continuous Deployment** automates the release process.
-
 *   **Infrastructure as Code** to manage and provision infrastructure using development practices.
-
-*   **Cloud Native** to fully embrace cloud elasticity.
-
+*   **Cloud Native** to fully embrace cloud flexibilty and adaptability.
 *   **Zero Downtime Deployment** to update the product without affecting user experience.
-
 *   **Observability** to understand and monitor your system's behaviour in real-time.
-
 *   **Test Driven Development** guarantees code behaviour and prevent regressions.
-
 *   **Automated Testing** continuously validates your code's functionality.
-
 *   **Code Review** is a process where team members review and comment code before releasing.
-
 *   **Pair Programming** is a collaborative way to engineer code as a group.
-
 *   **Evolutionary Architecture** emphasises adaptability of your system via incremental changes over time.
 
 ### Authors
